@@ -7,7 +7,7 @@ import {
   Text,
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
-import EventCard from './EventCard'
+import EventCard from './EventCard';
 
 export default class Home extends Component {
  constructor(props) {
@@ -48,6 +48,6 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create ({
    listContainer: {
-      paddingTop: 50
+     paddingTop: 50,
    },
 });
