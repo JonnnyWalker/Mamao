@@ -1,53 +1,33 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
+import {Router, Scene} from 'react-native-router-flux';
+
+import Home from './Home';
+import Event from './Event';
+import Pay from './Pay';
+import Zone from './Zone';
+import Information from './Information';
+import Confirmation from './Confirmation';
+import Feedback from './Feedback';
 
 export default class Mamao extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+      return (
+                <Router>
+                  <Scene key="root">
+                    <Scene key="Home" component={Home} title="News" initial={true}/>
+                    <Scene key="Event" component={Event} title="Event" />
+                    <Scene key="Zone" component={Zone} title="Zone" />
+                    <Scene key="Information" component={Information} title="Information" />
+                    <Scene key="Pay" component={Pay} title="Pay" />
+                    <Scene key="Confirmation" component={Confirmation} title="Confirmation" />
+                    <Scene key="Feedback" component={Feedback} title="Feedback" />
+                  </Scene>  
+                </Router>
+            );
+          }
+        }
 
 AppRegistry.registerComponent('Mamao', () => Mamao);
