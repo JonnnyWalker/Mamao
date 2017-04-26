@@ -10,6 +10,7 @@
     "react": "16.0.0-alpha.6",
     "react-native": "0.43.0",
     "react-native-experimental-navigation": "^0.26.12",
+    "react-native-firebase": "^1.0.0-alpha12",
     "react-native-router-flux": "^3.38.0"
   },
   "devDependencies": {

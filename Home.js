@@ -15,6 +15,7 @@ export default class Home extends Component {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       dataSource: ds.cloneWithRows([
+
         {image: require('./img/00001.jpg'), title: "ขอวอนก่อนไฟนอล : ศิลปิน SOMKIAT @Zound 21.04.2017"},
         {image: require('./img/00002.jpg'), title: "DJ FAAHSAI x MC HARLEMBAY @Zound 22.04.2017"},
         {image: require('./img/00003.jpg'), title: "DJ SPACEMONKEY x MC EDDY @Zound 12.04.2017"},
@@ -29,6 +30,7 @@ export default class Home extends Component {
         {image: require('./img/00012.jpg'), title: "ซาวด์แจกบัตรสาดกันใหญ่เพียงซื้อ Blend 285 1 เซต / UBEER 1 โปร รับบัตร 1 day ฟรี 2 ใบ 3-6.03.2017"},
         {image: require('./img/00013.jpg'), title: "TICKET บัตรสาดรายวันซื้อบัตรได้ที่หน้างาน จำหน่ายตั้งแต่ 7-12.03.2017"},
         {image: require('./img/00014.jpg'), title: "ZOUND 2nd ANNIVERSARY Animal Project ศิลปิน Slot Machine @Zound 30.12.2016"},
+
       ])
     };
   }
@@ -39,7 +41,7 @@ export default class Home extends Component {
           <ListView
             style = {styles.listContainer}
             dataSource={this.state.dataSource}
-            renderRow={(rowData) => <EventCard image={rowData.image} title={rowData.title} />}
+            renderRow={(rowData) => <EventCard image={rowData.image} titleText={rowData.titleText} bodyText={rowData.bodyText} />}
           />
       </View>
     );
