@@ -15,7 +15,7 @@ export default class Home extends Component {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       dataSource: ds.cloneWithRows([
-        {image: require('./img/00001.jpg'), title: "ABC"},
+        {image: require('./img/00001.jpg'), titleText: "SOMKIAT/ขอวอนก่อนไฟนอล", bodyText:"@Zound 21.04.2017"},
         {image: require('./img/00002.jpg'), title: "XYZ"},
         {image: require('./img/00003.jpg'), title: "XYZ"},
         {image: require('./img/00004.jpg'), title: "XYZ"},
@@ -39,7 +39,7 @@ export default class Home extends Component {
           <ListView
             style = {styles.listContainer}
             dataSource={this.state.dataSource}
-            renderRow={(rowData) => <EventCard image={rowData.image} title={rowData.title} />}
+            renderRow={(rowData) => <EventCard image={rowData.image} titleText={rowData.titleText} bodyText={rowData.bodyText} />}
           />
       </View>
     );

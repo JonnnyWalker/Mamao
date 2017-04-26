@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "20840198880",
+    "firebase_url": "https://mamao-bc89a.firebaseio.com",
+    "project_id": "mamao-bc89a",
+    "storage_bucket": "mamao-bc89a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20840198880:android:e72dd40597af8df5",
+        "android_client_info": {
+          "package_name": "com.mamao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20840198880-lsv0f44bjph46qpc0nd2h12bs8cnp9og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnI63hebaoLivfbwlvs-oPSh7rebvqhkI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

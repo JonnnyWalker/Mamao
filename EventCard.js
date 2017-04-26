@@ -11,7 +11,16 @@ export default class EventCard extends Component {
   render() {
       return (
                 <View style={styles.container}>
-                    <Text style={styles.tex}>{this.props.title}</Text>
+                    <View>
+                        <Text style={styles.baseText}>
+                            <Text style={styles.tText}>{this.props.titleText}</Text>
+                        </Text>
+                    </View>
+                    <View>
+                        <Text style={styles.baseText}>
+                            <Text style={styles.bText}>{this.props.bodyText}</Text>
+                        </Text>    
+                    </View>    
                     <Image source = {this.props.image} onPress={Actions.Event} style={styles.img}/>
                 </View>       
             );
@@ -25,10 +34,18 @@ const styles = StyleSheet.create({
      marginTop: 10,
      marginBottom: 51
   },
-  tex: {
+  baseText: {
       flex:1,
       paddingLeft: 10,
-      paddingRight: 10
+      paddingRight: 10,
+      fontFamily: '',
+  },
+  tText: {
+      fontSize: 20,
+      fontWeight: 'bold',
+  },
+  bText: {
+      fontStyle: 'italic',
   },
   img: {
       width: 'auto',
