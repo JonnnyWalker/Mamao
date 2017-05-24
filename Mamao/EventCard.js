@@ -7,21 +7,33 @@ import {
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 
+
 export default class EventCard extends Component {
+constructor(props){
+    super(props);
+    // alert(JSON.stringify(this.props.item));
+}
+
   render() {
+      
       return (
                 <View style={styles.container}>
                     <View>
                         <Text style={styles.baseText}>
-                            <Text style={styles.tText}>{this.props.titleText}</Text>
+                            <Text style={styles.tText}>{this.props.item.name}</Text>
+                            
+                            <Text style={styles.bText}>{this.props.item.date}</Text>
                         </Text>
                     </View>
                     <View>
                         <Text style={styles.baseText}>
-                            <Text style={styles.bText}>{this.props.bodyText}</Text>
+                            <Text style={styles.bText}>{this.props.item.ename}</Text>
+                            
+                            <Text style={styles.bText}>{this.props.item.place}</Text>
+                            
                         </Text>    
                     </View>    
-                    <Image source = {this.props.image} onPress={Actions.Event} style={styles.img}/>
+                    <Image source = {{uri: this.props.item.img}} onPress={Actions.Event} style={styles.img}/>
                 </View>       
             );
           }

@@ -13,16 +13,13 @@ import firebase from './firebase';
 export default class Login extends Component {
     constructor(props){
         super(props)
-        this.state = {test: {a: 0}};
+        this.state = {
+            test: {a: 0}
+        };
     }
     componentDidMount(){
         var self = this;
-        firebase.database()
-        .ref('test')
-        .on('value', (snapshot) => {
-            const value = snapshot.val();
-            self.setState({test: value});
-                });
+
     }
     render() {
         return (
@@ -33,7 +30,7 @@ export default class Login extends Component {
                             <Text style={styles.logo}>Mamao</Text> 
                         </View>
                         <View>
-                            <Text style={styles.logos}>@Hatyai {this.state.test.a}</Text>
+                            <Text style={styles.logos}>@Hatyai</Text>
                         </View>        
                         <View style={styles.inputContainer}>
                              <TextInput underlineColorAndroid='transparent' style={styles.input}
@@ -70,7 +67,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logo: {
-        color: 'white',
+        color: 'blue',
         fontSize: 80,
         fontWeight: 'bold',
         textShadowColor: '#252525',

@@ -19,7 +19,7 @@ export default class Mamao extends Component {
       return (
                 <Router>
                   <Scene key="root">
-                    <Scene key="Login" component={Login} title="Login" initial={true}/>
+                    <Scene key="Login" component={Login} title="Login" initial={true} />
                     <Scene key="Home" component={Home} title="News" />
                     <Scene key="Event" component={Event} title="Event" />
                     <Scene key="Zone" component={Zone} title="Zone" />
